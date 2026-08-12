@@ -17,8 +17,15 @@ form.addEventListener("submit", function (event) {
         return;
     }
 
+    const phonePattern = /^[0-9]{10}$/;
+
     if (phone === "") {
         alert("กรุณากรอกเบอร์โทรศัพท์");
+        return;
+    }
+
+    if (!phonePattern.test(phone)) {
+        alert("กรุณากรอกเบอร์โทรศัพท์ 10 หลัก");
         return;
     }
 
