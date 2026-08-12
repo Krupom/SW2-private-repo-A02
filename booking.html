@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .booking-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .student-info {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Fitness Studio Booking</h1>
+
+    <form id="bookingForm" novalidate>
+
+        <fieldset>
+            <legend>ข้อมูลผู้จอง</legend>
+
+            <label for="fullname">ชื่อ-นามสกุล</label><br>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <br>
+
+            <label for="phone">หมายเลขโทรศัพท์</label><br>
+            <input type="tel" id="phone" name="phone" required>
+
+            <br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required>
+
+            <br>
+
+            <label for="age">อายุ</label><br>
+            <input type="number" id="age" name="age" min="1" required>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>ข้อมูลการจองคลาส</legend>
+
+            <label for="class">เลือกคลาสออกกำลังกาย</label><br>
+            <select id="class" name="class" required>
+                <option value="">-- กรุณาเลือกคลาส --</option>
+                <option value="yoga">Yoga</option>
+                <option value="pilates">Pilates</option>
+                <option value="running">Running</option>
+                <option value="cycling">Indoor Cycling</option>
+            </select>
+
+            <br>
+
+            <label for="date">วันที่ต้องการเข้าเรียน</label><br>
+            <input type="date" id="date" name="date" required>
+
+            <br>
+
+            <label for="time">เลือกช่วงเวลา</label><br>
+            <select id="time" name="time" required>
+                <option value="">-- กรุณาเลือกเวลา --</option>
+                <option value="09:00-10:30">09:00-10:30</option>
+                <option value="10:30-12:00">10:30-12:00</option>
+                <option value="13:00-14:30">13:00-14:30</option>
+                <option value="16:00-17:30">16:00-17:30</option>
+            </select>
+
+            <br><br>
+
+            <label>ระดับประสบการณ์ในการออกกำลังกาย</label><br><br>
+
+            <input type="radio" id="beginner" name="experience" value="beginner" required>
+            <label for="beginner">ไม่เคยเข้าคลาสมาก่อน</label>
+
+            <br>
+
+            <input type="radio" id="some" name="experience" value="some">
+            <label for="some">มีประสบการณ์เล็กน้อย</label>
+
+            <br>
+
+            <input type="radio" id="regular" name="experience" value="regular">
+            <label for="regular">ออกกำลังกายรูปแบบนี้เป็นประจำ</label>
+
+            <br><br>
+
+            <label for="message">
+                ข้อจำกัดในการออกกำลังกายหรือข้อความเพิ่มเติม
+            </label><br>
+
+            <textarea id="message" name="message" rows="5" cols="50"></textarea>
+
+            <br>
+
+            <input type="checkbox" id="confirm" name="confirm" required>
+            <label for="confirm">
+                ข้าพเจ้ายืนยันว่าข้อมูลที่กรอกเป็นความจริง และเข้าใจว่าการส่งแบบฟอร์มนี้
+                ยังไม่ถือเป็นการยืนยันสิทธิ์เข้าเรียน
+            </label>
+
+            <br><br>
+
+            <button type="submit" class="booking-button">
+                Submit Booking
+            </button>
+        </fieldset>
+
+    </form>
+
+    <div class="student-info">
+        6631320721 - Tanwong Pattamamongkolchai
+    </div>
+    <script src="booking.js"></script>
+</body>
+
+</html>
